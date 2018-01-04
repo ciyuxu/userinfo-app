@@ -8,7 +8,7 @@ export default class Routes extends Component {
     return (
       <div>
         <Route path="/sign-in" component={SignIn} />
-        <Route path="/sign-up" component={SignUp} />
+       
       </div>
     );
   }

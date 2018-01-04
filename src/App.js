@@ -5,7 +5,6 @@ import muiTheme from "./styles/theme";
 import Routes from "./routes";
 import "./App.css";
 
-
 class App extends Component {
   getChildContext() {
     return { muiTheme };
