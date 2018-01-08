@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Route } from "react-router-dom";
-import SignIn from "./components/SignIn";
-import SignUp from "./components/SignUp";
+import SignIn from "./components/user/SignIn";
+import SignUp from "./components/user/SignUp";
 
 export default class Routes extends Component {
   render() {

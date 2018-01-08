@@ -1,5 +1,5 @@
-import { history } from "../store";
-import API from "../api";
+import { history } from "../../store";
+import API from "../../api";
 
 
 export const USER_SIGNED_IN = "USER_SIGNED_IN";

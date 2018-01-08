@@ -2,9 +2,18 @@ import React, { PureComponent } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { push } from "react-router-redux";
-import signOut from "../actions/sign-out";
+import signOut from "../actions/user/sign-out";
 import AppBar from "material-ui/AppBar";
 import FlatButton from "material-ui/FlatButton";
+import { palette } from "../styles/theme"
+const style = {
+    dropdown: {
+        background: "#ffffff",
+      
+    }
+    
+  };
+
 
 class Navbar extends PureComponent {
   signOut(event) {
@@ -33,7 +42,7 @@ class Navbar extends PureComponent {
           signedIn ? (
             <FlatButton label="Sign out" onClick={this.signOut.bind(this)} />
           ) : (
-              <div classname="dropdown">
+              <div style={style.dropdown} classname="dropdown">
                 <FlatButton label="Sign in" onClick={this.signIn.bind(this)} />
                 <FlatButton label="Sign up" onClick={this.signUp.bind(this)} />
              </div>

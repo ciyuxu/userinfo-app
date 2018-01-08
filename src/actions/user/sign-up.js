@@ -1,4 +1,4 @@
-import API from "../api";
+import API from "../../api";
 import signIn from "./sign-in";
 
 export const USER_SIGNED_UP = "USER_SIGNED_UP";

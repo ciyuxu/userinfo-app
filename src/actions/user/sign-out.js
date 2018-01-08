@@ -1,5 +1,5 @@
-import API from "../api";
-import { history } from "../store";
+import API from "../../api";
+import { history } from "../../store";
 import { replace, push } from "react-router-redux";
 export const USER_SIGNED_OUT = "USER_SIGNED_OUT";
 
