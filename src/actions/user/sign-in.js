@@ -15,7 +15,7 @@ export default user => {
       .then(user => {
         
         api.app.set("user", user);
-
+        history.replace("/home");
       
 
         dispatch({
