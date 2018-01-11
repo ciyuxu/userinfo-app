@@ -5,6 +5,7 @@ import Paper from "material-ui/Paper";
 import ClassIcon from "material-ui/svg-icons/action/class";
 import Menu from "material-ui/Menu";
 import MenuItem from "material-ui/MenuItem";
+import UserinfoEditor from "./userinfoEditor"
 
 const style = {
   paper: {
@@ -27,7 +28,7 @@ class Home extends PureComponent {
     return (
       <div className="ClassroomsOverview">
         <h1>Hello User</h1>
-
+        <UserinfoEditor />
         
       </div>
     );
