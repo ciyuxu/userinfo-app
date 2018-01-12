@@ -113,6 +113,7 @@ class UserinfoEditor extends PureComponent {
           onChange={this.updatePhone.bind(this)}
         />
       <br />
+      <h2> Address </h2>
       <TextField
           type="text"
           ref="address"
