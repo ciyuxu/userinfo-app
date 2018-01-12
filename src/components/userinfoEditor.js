@@ -46,7 +46,7 @@ class UserinfoEditor extends PureComponent {
 
   updateAddress(event, date) {
     this.setState({
-      Address: event.target.value
+      address: event.target.value
     });
   }
 
