@@ -5,6 +5,7 @@ import TextField from "material-ui/TextField";
 import RaisedButton from "material-ui/RaisedButton";
 import createUserinfo from "../actions/createUserinfo";
 import NewIcon from "material-ui/svg-icons/content/add";
+import SaveIcon from "material-ui/svg-icons/action/done";
 
 class UserinfoEditor extends PureComponent {
   constructor(props) {
@@ -44,9 +45,27 @@ class UserinfoEditor extends PureComponent {
     });
   }
 
-  updateAddress(event, date) {
+  updateNumber(event, date) {
     this.setState({
-      address: event.target.value
+      number: event.target.value
+    });
+  }
+
+  updateStreet(event, date) {
+    this.setState({
+      street: event.target.value
+    });
+  }
+
+  updateCity(event, date) {
+    this.setState({
+      city: event.target.value
+    });
+  }
+
+  updateZipcode(event, date) {
+    this.setState({
+      zipcode: event.target.value
     });
   }
 
@@ -62,6 +81,17 @@ class UserinfoEditor extends PureComponent {
   //   });
   //   return Object.keys(errors).length === 0;
   // }
+  saveAddress() {
+    const { number, street, city, zipcode } = this.state;
+
+    const address = { number, street, city, zipcode };
+
+    
+      this.props.createAddress(address);
+    
+  }
+
+
 
   saveUserinfo() {
     const { name, gender, email, phone, address } = this.state;
@@ -116,15 +146,52 @@ class UserinfoEditor extends PureComponent {
       <h2> Address </h2>
       <TextField
           type="text"
-          ref="address"
-          className="address"
-          hintText="Type your address here"
-          value={this.state.address}
-          onChange={this.updateAddress.bind(this)}
+          ref="number"
+          className="number"
+          hintText="Type your house number here"
+          value={this.state.number}
+          onChange={this.updateNumber.bind(this)}
         />
 
+      <TextField
+          type="text"
+          ref="street"
+          className="street"
+          hintText="Type your street here"
+          value={this.state.street}
+          onChange={this.updateStreet.bind(this)}
+        />
+
+      <TextField
+          type="text"
+          ref="city"
+          className="city"
+          hintText="Type your city here"
+          value={this.state.city}
+          onChange={this.updateCity.bind(this)}
+        />
+      
+      <TextField
+          type="text"
+          ref="zipcode"
+          className="zipcode"
+          hintText="Type your zipcode here"
+          value={this.state.zipcode}
+          onChange={this.updateZipcode.bind(this)}
+        />
+
+
+
       <br />
-        
+      <RaisedButton
+          label="Save Address"
+          primary={true}
+          onClick={this.saveAddress.bind(this)}
+          icon={<SaveIcon />}
+        />
+      <br />
+      <br />
+
 
         <RaisedButton
           label="Create Userinfo"
